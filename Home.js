@@ -1,19 +1,20 @@
-import styled from "styled-components";
+import React, { Component } from "react";
+import { AiOutlineShoppingCart } from "react-icons/ai";
+import { Link } from "react-router-dom";
+import Seleccion from "../components/Seleccion";
 
-export const Nav = styled.nav`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem;
-`;
-
-export const Img = styled.img`
-  width: 64px;
-  height: 64px;
-`;
-
-export const StyledDiv = styled.div`
-  height: 40px;
-  width: 40px;
-  position: absolute; 
-`;
+export default class Home extends Component {
+  render() {
+    return (
+      <div>
+        <nav>
+          <Link to={"/"}></Link>
+          <Link to="/" className="carrito">
+            <AiOutlineShoppingCart className="carrito" />
+          </Link>
+        </nav>
+        <Seleccion />
+      </div>
+    );
+  }
+}
